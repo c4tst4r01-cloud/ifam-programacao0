@@ -1,8 +1,17 @@
-let n = parseInt(prompt("Digite sua idade" ))
-let soma =0
-for(let i=0; i<soma; i++){
-let idade = parseInt(prompt("Digite a idade idade"))
- soma +=idade
+let n = parseInt(prompt("Quantas pessoas serão entrevistadas?"))
+
+var idades = []
+var soma = 0
+var media = 0
+
+// Ler as idades
+for (let i = 0; i < n; i++) {
+    idades[i] = parseInt(prompt("Idade da pessoa " + (i+1) + ":"))
+    soma += idades[i]
 }
- let media soma /n
-alert("resutado " + "media de idade"
+
+// Calcular a média
+media = soma / n
+
+// Mostrar resultado
+document.writeln("<b>Média das idades:</b> " + media.toFixed(2))
