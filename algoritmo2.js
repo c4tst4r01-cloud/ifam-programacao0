@@ -1,17 +1,15 @@
-/*Dada uma sequência de n números, imprimi-la na ordem inversa à da leitura*/
-let n = parseInt(prompt("Quantos números você quer digitar?"));
-let numeros = [];
-let pares = 0, impares = 0;
+let n = parseInt(prompt("Quantos números deseja inserir?"))
 
+var numeros = []
+
+// Ler os números
 for (let i = 0; i < n; i++) {
-  numeros[i] = parseInt(prompt(`Digite o número ${i + 1}:`));
-  if (numeros[i] % 2 === 0) pares++;
-  else impares++;
+    numeros[i] = prompt("Digite o número da posição " + i + ":")
 }
 
-document.writeln("<b>Números informados:</b><br>");
-for (let i = 0; i < n; i++) {
-  document.writeln(numeros[i] + "<br>");
-}
+// Imprimir na ordem inversa
+document.writeln("<b>Ordem inversa:</b><br>")
 
-document.writeln(`<br>Quantidade de pares: ${pares}<br>Quantidade de ímpares: ${impares}`);
+for (let i = n - 1; i >= 0; i--) {
+    document.writeln(numeros[i] + " ")
+}
