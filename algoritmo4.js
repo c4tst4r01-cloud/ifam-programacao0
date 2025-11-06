@@ -1,10 +1,25 @@
-let n = parseInt(prompt("Quantas pessoas foram entrevistadas?"));
-let soma = 0;
+var vetorA = []
+var vetorB = []
+var vetorC = []
 
-for (let i = 0; i < n; i++) {
-  let idade = parseInt(prompt(`Digite a idade da pessoa ${i + 1}:`));
-  soma += idade;
+// Ler vetor A
+for (let i = 0; i < 10; i++) {
+    vetorA[i] = parseFloat(prompt("Vetor A - posição " + i + ":"))
 }
 
-let media = soma / n;
-document.writeln(`<b>Média das idades:</b> ${media.toFixed(2)}`);
+// Ler vetor B
+for (let i = 0; i < 10; i++) {
+    vetorB[i] = parseFloat(prompt("Vetor B - posição " + i + ":"))
+}
+
+// Multiplicar e armazenar no vetor C
+for (let i = 0; i < 10; i++) {
+    vetorC[i] = vetorA[i] * vetorB[i]
+}
+
+// Mostrar vetor resultante
+document.writeln("<b>Vetor resultante (multiplicação):</b><br>")
+
+for (let i = 0; i < 10; i++) {
+    document.writeln(vetorC[i] + " ")
+}
